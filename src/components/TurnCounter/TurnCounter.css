@@ -1,0 +1,83 @@
+.turn__container {
+  position: relative;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+.turn-counter__turn {
+  font-size: 3em;
+}
+
+.turn-counter__counter {
+  font-size: 3em;
+  font-weight: 100;
+  margin: 0.25em 0 0 0; 
+}
+
+.turn-counter__button {
+  height: 20px;
+  align-self: center;
+  margin: 0 10px;
+}
+
+.ring-visualiser {
+  border-radius: 100%;
+  background: rgba(200, 20, 5, 0.5);
+  display: inline-block;
+  position: absolute;
+  top: 44px;
+}
+
+.ring-visualiser-will-be-destroyed {
+  animation-duration: 2s;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes blink {
+  0% {
+    background: rgba(200, 20, 5, 0.5);
+  }
+
+  50% {
+    background: rgba(150, 150, 150, 0.2);
+  }
+
+  100% {
+    background: rgba(200, 20, 5, 0.5);
+  }
+}
+
+.ring-visualiser-destroyed {
+  background: rgba(150, 150, 150, 0.2);
+}
+
+.ring-visualiser-outer {
+  width: 100px;
+  height: 100px;
+  margin-left: 75px;
+}
+
+.ring-visualiser-middle {
+  width: 66px;
+  height: 66px;
+  position: relative;
+  top: 16.66px;;
+}
+
+.ring-visualiser-inner {
+  width: 33px;
+  height: 33px;
+  position: relative;
+  top: 16.66px;
+}
+
+.turn-status__collapse {
+  font-weight: 500;
+  color: rgba(0,0,0,0.63);
+  margin-top: 1em;
+  margin-bottom: 0;
+}

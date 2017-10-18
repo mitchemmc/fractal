@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+
+.App {
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.App-header {
+  background-image: url("./images/background.jpg");
+  background-size: cover;
+  background-color: #222;
+  height: 100px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-title {
+  font-family: 'Monoton', cursive;
+  font-weight: 100;
+  font-size: 3em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.container {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin: 10px;
+  padding: 20px;
+  background: white;
+}
+
+.container__title {
+  margin: 0;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.counter__container {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.counter__heading {
+  font-size: 2em;
+  font-weight: 100;
+}
+
+.counter-list__container {
+  width: 100%;
+  height: 150px;
+  overflow: scroll;
+  list-style: none;
+  padding: 0;
+  background: rgb(250,250,250);
+}
+
+.counter-list-item {
+  font-size: 1.5em;
+  text-align: center;
+  color: rgba(29, 29, 29, 0.6);
+  animation: fadein 1s;
+}
+
+.counter-list-item__main {
+  font-size: 2em;
+  color: rgba(29, 29, 29, 1);
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

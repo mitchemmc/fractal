@@ -1,0 +1,11 @@
+.header-actions__container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.header-action__dice {
+  margin: 0 10px;
+  display: inline;
+}
