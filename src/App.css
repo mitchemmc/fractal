@@ -15,12 +15,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .App-title {
   font-family: 'Monoton', cursive;
   font-weight: 100;
   font-size: 3em;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .App-intro {

@@ -4,6 +4,7 @@ import TurnCounter from './components/TurnCounter';
 import DimensionalCollision from './components/DimensionalCollision';
 import HeaderActions from './components/HeaderActions';
 import Dice from './components/Dice';
+import Rules from './components/Rules'; 
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +13,9 @@ class App extends Component {
     this.previousTurn = this.previousTurn.bind(this);
     this.showDice = this.showDice.bind(this);
     this.reset = this.reset.bind(this);
-    this.state = {turn: 1, showDice: false};
+    this.showRules = this.showRules.bind(this); 
+    this.closeRules = this.closeRules.bind(this); 
+    this.state = {turn: 1, showDice: false, showRules: false};
   }
 
   nextTurn() {
@@ -31,11 +34,21 @@ class App extends Component {
     this.setState({turn: 1});
   }
 
+  closeRules() {
+    this.setState({showRules: false}); 
+  }
+
+  showRules() {
+    this.setState({showRules: true}); 
+  }
+
   render() {
     return (
       <div className="App">
+        <Rules showRules={this.state.showRules} closeRules={this.closeRules}/>
         <header className="App-header">
           <h1 className="App-title">Fractal</h1>
+          <button onClick={this.showRules}>Show Rules</button>
           <HeaderActions showDice={this.showDice} reset={this.reset}/>
         </header>
         <TurnCounter nextTurn={this.nextTurn} previousTurn={this.previousTurn} turn={this.state.turn} />
