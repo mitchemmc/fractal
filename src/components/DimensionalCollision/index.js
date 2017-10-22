@@ -66,7 +66,7 @@ class DimensionalCollision extends Component {
   }
 
   openPortal() {
-    if(this.state.portalOpen) {      
+    if(!this.state.portalOpen) {      
       this.setState({portalOpen: true});
       this.addMessage(PORTAL_OPEN_MESSAGE);
     }
