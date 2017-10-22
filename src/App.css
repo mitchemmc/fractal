@@ -3,6 +3,7 @@
 .App {
   text-align: center;
   background: #f9f9f9;
+  height: 100vh;
 }
 
 .App-header {
@@ -76,6 +77,10 @@
 .counter-list-item__main {
   font-size: 2em;
   color: rgba(29, 29, 29, 1);
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 @keyframes fadein {

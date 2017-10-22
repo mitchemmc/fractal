@@ -44,7 +44,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className={"App" + (this.state.showRules ? " no-scroll" : "")}>
         <Rules showRules={this.state.showRules} closeRules={this.closeRules}/>
         <header className="App-header">
           <h1 className="App-title">Fractal</h1>

@@ -22,17 +22,10 @@ class DimensionalCollision extends Component {
   }
 
   roll() {
-    let counter = 0;
-    const interval = setInterval(function() {
-      counter++;
-      this.setState({roll: Math.floor(Math.random() * 10 + 1)});
-      if(counter > 9) {
-        clearInterval(interval);
-        if(this.state.roll >= 7) {
-          this.addItem();
-        }
-      }
-    }.bind(this), 100);
+    this.setState({roll: Math.floor(Math.random() * 10 + 1)});
+    if(this.state.roll >= 7) {
+      this.addItem();
+    }
   }
 
   getCellId(row, column) {
@@ -75,13 +68,17 @@ class DimensionalCollision extends Component {
   }
 
   openPortal() {
-    this.setState({portalOpen: true});
-    this.addMessage(PORTAL_OPEN_MESSAGE);
+    if(this.state.portalOpen) {      
+      this.setState({portalOpen: true});
+      this.addMessage(PORTAL_OPEN_MESSAGE);
+    }
   }
 
   closePortal() {
-    this.setState({portalOpen: false, turnsSincePortalClose: 0});
-    this.addMessage(PORTAL_CLOSE_MESSAGE);
+    if(this.state.portalOpen) {
+      this.setState({portalOpen: false, turnsSincePortalClose: 0});
+      this.addMessage(PORTAL_CLOSE_MESSAGE);
+    }
   }
 
   addMessage(message) {
