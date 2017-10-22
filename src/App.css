@@ -46,6 +46,9 @@
 .counter__container {
   width: 100%;
   padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .counter__heading {
@@ -55,6 +58,7 @@
 
 .counter-list__container {
   width: 100%;
+  max-width: 400px;
   height: 150px;
   overflow: scroll;
   list-style: none;

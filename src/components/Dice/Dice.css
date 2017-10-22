@@ -6,6 +6,7 @@
 
 .dice-counter__container {
   display: flex;
+  flex-direction: row;
 }
 
 .hide {
@@ -14,4 +15,10 @@
   overflow: hidden;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 940px) {
+  .dice-counter__container {
+    flex-direction: column;
+  }
 }

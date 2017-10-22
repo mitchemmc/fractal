@@ -36,6 +36,8 @@
 .collision-content {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
 }
 
 .collision-list__container {
@@ -96,4 +98,10 @@
   display: inline-block;
   margin-right: 5px;
   cursor: initial;
+}
+
+@media screen and (max-width: 940px) {
+  .collision-content {
+    flex-direction: column;
+  }
 }
