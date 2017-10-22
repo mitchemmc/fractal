@@ -23,7 +23,7 @@ class Rules extends Component {
                 <li>The shaded P in the portal room represents the portal, if the portal is open players may lands on this and draw a power card. (for more see Event Rules)</li>
             </ol>
             <h4>Board layout:</h4>
-            <img className="rule__img" src={board_img}/>
+            <img className="rule__img" src={board_img} alt="sample board layout"/>
             <h3>Cards:</h3>
             <ul>
                 <li>Players can only have one weapon card, if you land on an weapon chest you may draw a card and either keep your current weapon or trade it in for the new weapon. Exception: You can hold two daggers. </li>

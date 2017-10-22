@@ -33,16 +33,14 @@ class DimensionalCollision extends Component {
   }
 
   addItem() {
-    let row, column = -1;
-    while(row < 0 || column < 0) {
-      row = Math.floor(Math.random() * 7);
-      column = Math.floor(Math.random() * 7);
-      // Prevent going to the middle or a cell that's already taken
-      if((row === 3 && column === 3) || (
-        this.state.items.find((item) => item.row === row && item.column === column)
-      )) {
-        row, column = -1;
-      }
+    let row = Math.floor(Math.random() * 7);
+    let column = Math.floor(Math.random() * 7);
+    // Prevent going to the middle or a cell that's already taken
+    if((row === 3 && column === 3) || (
+      this.state.items.find((item) => item.row === row && item.column === column)
+    )) {
+      this.addItem();
+      return;
     }
     const items = this.state.items.slice();
     items.push({row: row, column: column});
